@@ -130,6 +130,13 @@
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(12px);
+            display: block;
+            /* Ensure it behaves like a block */
+            text-decoration: none;
+            /* Remove underline from everything inside */
+            height: 100%;
+            /* Uniform height */
+            box-sizing: border-box;
         }
 
         .card::before {
@@ -260,7 +267,7 @@
             </h2>
             <div class="grid">
                 <!-- Virtual Lab -->
-                <div class="card">
+                <a href="https://github.com/imamimam13/virtual-lab" target="_blank" class="card">
                     <h3>Virtual Interactive Lab</h3>
                     <p>
                         <span class="lang-id">Platform manajemen laboratorium komprehensif. Menghadirkan penjadwalan
@@ -273,10 +280,10 @@
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">Docker</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Page Builder -->
-                <div class="card">
+                <a href="https://github.com/imamimam13/page-builder" target="_blank" class="card">
                     <h3>Page Builder System</h3>
                     <p>
                         <span class="lang-id">Editor visual drag-and-drop modern untuk menciptakan halaman web dinamis
@@ -289,10 +296,10 @@
                         <span class="tag">Visual Engine</span>
                         <span class="tag">UX Design</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Infrastructure -->
-                <div class="card">
+                <a href="https://github.com/imamimam13/infrastructure" target="_blank" class="card">
                     <h3>
                         <span class="lang-id">Infrastruktur & Keamanan</span>
                         <span class="lang-en hidden">Infrastructure & Security</span>
@@ -308,10 +315,10 @@
                         <span class="tag">Cybersecurity</span>
                         <span class="tag">CI/CD</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Kampus CMS -->
-                <div class="card">
+                <a href="https://github.com/imamimam13/kampus-cms" target="_blank" class="card">
                     <h3>Kampus CMS</h3>
                     <p>
                         <span class="lang-id">Solusi manajemen konten terpadu untuk ekosistem universitas, memfasilitasi
@@ -324,10 +331,10 @@
                         <span class="tag">Enterprise</span>
                         <span class="tag">EdTech</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Siakad -->
-                <div class="card">
+                <a href="https://github.com/imamimam13/siakad" target="_blank" class="card">
                     <h3>Siakad (Private)</h3>
                     <p>
                         <span class="lang-id">Sistem Informasi Akademik skala besar untuk pengelolaan data mahasiswa,
@@ -339,10 +346,10 @@
                         <span class="tag">Core System</span>
                         <span class="tag">Big Data</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Bisnis Digital -->
-                <div class="card">
+                <a href="https://github.com/imamimam13/Bisnis-Digital" target="_blank" class="card">
                     <h3>Bisnis Digital</h3>
                     <p>
                         <span class="lang-id">Koleksi literatur dan panduan strategis mengenai kewirausahaan dan
@@ -354,7 +361,7 @@
                         <span class="tag">Publication</span>
                         <span class="tag">Business Strategy</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
