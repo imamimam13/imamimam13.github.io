@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Imam</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--card-bg);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .card .tags {
+            margin-top: 16px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--card-bg);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .lang-switch button {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-weight: 600;
+            padding: 5px;
+            transition: color 0.2s;
+        }
+
+        .lang-switch button.active {
+            color: var(--accent);
+        }
+
+        .lang-switch button:hover {
+            color: var(--text-primary);
+        }
+
+        .divider {
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 600px) {
+            .lang-switch {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+                display: inline-flex;
+            }
+
+            header {
+                padding-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="lang-switch">
+                <button onclick="setLang('id')" id="btn-id" class="active">ID</button>
+                <span class="divider">|</span>
+                <button onclick="setLang('en')" id="btn-en">EN</button>
+            </div>
+            <h1>
+                <span class="lang-id">Portofolio Imam</span>
+                <span class="lang-en hidden">Imam's Portfolio</span>
+            </h1>
+            <p class="subtitle">
+                <span class="lang-id">Full Stack Developer | Engineer | Educator</span>
+                <span class="lang-en hidden">Full Stack Developer | Engineer | Educator</span>
+            </p>
+        </header>
+
+        <section id="projects">
+            <h2>
+                <span class="lang-id">Proyek Unggulan</span>
+                <span class="lang-en hidden">Featured Projects</span>
+            </h2>
+            <div class="grid">
+                <!-- Virtual Lab -->
+                <div class="card">
+                    <h3>Virtual Interactive Lab</h3>
+                    <p>
+                        <span class="lang-id">Platform manajemen laboratorium yang komprehensif dengan fitur
+                            penjadwalan, tracer study, pembuatan sertifikat, dan notifikasi WhatsApp otomatis.</span>
+                        <span class="lang-en hidden">A comprehensive laboratory management platform featuring
+                            scheduling, tracer studies, certificate generation, and automated WhatsApp
+                            notifications.</span>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Page Builder -->
+                <div class="card">
+                    <h3>Page Builder System</h3>
+                    <p>
+                        <span class="lang-id">Editor visual drag-and-drop yang canggih untuk pembuatan halaman dinamis
+                            dengan feed RSS kustom dan integrasi media sosial.</span>
+                        <span class="lang-en hidden">A sophisticated visual drag-and-drop editor allowing dynamic page
+                            creation with custom RSS feeds and social media integration.</span>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Visual Editor</span>
+                        <span class="tag">UX/UI</span>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="card">
+                    <h3>
+                        <span class="lang-id">Infrastruktur & Keamanan</span>
+                        <span class="lang-en hidden">Infrastructure & Security</span>
+                    </h3>
+                    <p>
+                        <span class="lang-id">Implementasi DevOps termasuk mitigasi RCE yang aman, pipeline CI/CD yang
+                            tangguh dengan Docker, dan solusi backup otomatis.</span>
+                        <span class="lang-en hidden">DevOps implementation including secure RCE mitigation, robust CI/CD
+                            pipelines with Docker, and automated backup solutions.</span>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">DevOps</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Kampus CMS -->
+                <div class="card">
+                    <h3>Kampus CMS</h3>
+                    <p>
+                        <span class="lang-id">Sistem Manajemen Konten (CMS) yang dirancang khusus untuk lingkungan
+                            universitas guna memperlancar manajemen aset digital.</span>
+                        <span class="lang-en hidden">A tailored Content Management System for university environments to
+                            streamline digital asset management and information flow.</span>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">CMS</span>
+                        <span class="tag">
+                            <span class="lang-id">Pendidikan</span>
+                            <span class="lang-en hidden">Education</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Siakad -->
+                <div class="card">
+                    <h3>Siakad (Private)</h3>
+                    <p>
+                        <span class="lang-id">Sistem Informasi Akademik yang menangani rekam jejak mahasiswa yang
+                            kompleks, sistem penilaian, dan pemrosesan data akademik.</span>
+                        <span class="lang-en hidden">Academic Information System designed to handle complex student
+                            records, grading, and academic data processing.</span>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">SIAKAD</span>
+                        <span class="tag">
+                            <span class="lang-id">Manajemen</span>
+                            <span class="lang-en hidden">Management</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bisnis Digital -->
+                <div class="card">
+                    <h3>Bisnis Digital</h3>
+                    <p>
+                        <span class="lang-id">Sumber daya pendidikan dan e-book yang berfokus pada strategi bisnis
+                            digital dan kewirausahaan modern.</span>
+                        <span class="lang-en hidden">Educational resources and e-books focusing on digital business
+                            strategies and modern entrepreneurship.</span>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">E-book</span>
+                        <span class="tag">
+                            <span class="lang-id">Pendidikan</span>
+                            <span class="lang-en hidden">Education</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>
+                <span class="lang-id">Hubungi Saya</span>
+                <span class="lang-en hidden">Get In Touch</span>
+            </h2>
+            <p style="text-align: center; color: var(--text-secondary);">
+                <span class="lang-id">Lihat kode saya di <a href="https://github.com/imamimam13">GitHub</a>.</span>
+                <span class="lang-en hidden">Check out my code on <a
+                        href="https://github.com/imamimam13">GitHub</a>.</span>
+            </p>
+        </section>
+
+        <footer>
+            <p>
+                <span class="lang-id">&copy; 2026 Imam. Hak Cipta Dilindungi.</span>
+                <span class="lang-en hidden">&copy; 2026 Imam. All rights reserved.</span>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Toggle Content
+            const idElements = document.querySelectorAll('.lang-id');
+            const enElements = document.querySelectorAll('.lang-en');
+
+            if (lang === 'id') {
+                idElements.forEach(el => el.classList.remove('hidden'));
+                enElements.forEach(el => el.classList.add('hidden'));
+                document.documentElement.lang = 'id';
+            } else {
+                idElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+</body>
+
+</html>
